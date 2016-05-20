@@ -10,110 +10,110 @@ namespace DualShock4
 {
     internal class DS4Device
     {
-        public InputChannelTypes.JoyAxis LSx { get; set; }
-        public InputChannelTypes.JoyAxis LSy { get; set; }
-        public InputChannelTypes.JoyAxis RSx { get; set; }
-        public InputChannelTypes.JoyAxis RSy { get; set; }
+        public ODIF.JoyAxis LSx { get; set; }
+        public ODIF.JoyAxis LSy { get; set; }
+        public ODIF.JoyAxis RSx { get; set; }
+        public ODIF.JoyAxis RSy { get; set; }
 
-        public InputChannelTypes.Button L3 { get; set; }
-        public InputChannelTypes.Button R3 { get; set; }
+        public ODIF.Button L3 { get; set; }
+        public ODIF.Button R3 { get; set; }
 
-        public InputChannelTypes.JoyAxis L2 { get; set; }
-        public InputChannelTypes.JoyAxis R2 { get; set; }
-        public InputChannelTypes.Button L1 { get; set; }
-        public InputChannelTypes.Button R1 { get; set; }
+        public ODIF.JoyAxis L2 { get; set; }
+        public ODIF.JoyAxis R2 { get; set; }
+        public ODIF.Button L1 { get; set; }
+        public ODIF.Button R1 { get; set; }
 
-        public InputChannelTypes.Button DUp { get; set; }
-        public InputChannelTypes.Button DDown { get; set; }
-        public InputChannelTypes.Button DLeft { get; set; }
-        public InputChannelTypes.Button DRight { get; set; }
+        public ODIF.Button DUp { get; set; }
+        public ODIF.Button DDown { get; set; }
+        public ODIF.Button DLeft { get; set; }
+        public ODIF.Button DRight { get; set; }
 
-        public InputChannelTypes.Button Cross { get; set; }
-        public InputChannelTypes.Button Circle { get; set; }
-        public InputChannelTypes.Button Square { get; set; }
-        public InputChannelTypes.Button Triangle { get; set; }
+        public ODIF.Button Cross { get; set; }
+        public ODIF.Button Circle { get; set; }
+        public ODIF.Button Square { get; set; }
+        public ODIF.Button Triangle { get; set; }
 
-        public InputChannelTypes.Button PS { get; set; }
-        public InputChannelTypes.Button Share { get; set; }
-        public InputChannelTypes.Button Options { get; set; }
+        public ODIF.Button PS { get; set; }
+        public ODIF.Button Share { get; set; }
+        public ODIF.Button Options { get; set; }
 
-        public InputChannelTypes.JoyAxis Battery { get; set; }
-        public InputChannelTypes.Button Charging { get; set; }
+        public ODIF.JoyAxis Battery { get; set; }
+        public ODIF.Button Charging { get; set; }
 
-        public InputChannelTypes.Button TouchpadButton { get; set; }
-        public InputChannelTypes.Button TouchpadTouchOne { get; set; }
-        public InputChannelTypes.Button TouchpadTouchTwo { get; set; }
+        public ODIF.Button TouchpadButton { get; set; }
+        public ODIF.Button TouchpadTouchOne { get; set; }
+        public ODIF.Button TouchpadTouchTwo { get; set; }
 
-        public InputChannelTypes.JoyAxis TouchpadTouchOneX { get; set; }
-        public InputChannelTypes.JoyAxis TouchpadTouchOneY { get; set; }
+        public ODIF.JoyAxis TouchpadTouchOneX { get; set; }
+        public ODIF.JoyAxis TouchpadTouchOneY { get; set; }
 
-        public InputChannelTypes.JoyAxis TouchpadTouchTwoX { get; set; }
-        public InputChannelTypes.JoyAxis TouchpadTouchTwoY { get; set; }
+        public ODIF.JoyAxis TouchpadTouchTwoX { get; set; }
+        public ODIF.JoyAxis TouchpadTouchTwoY { get; set; }
 
-        public InputChannelTypes.JoyAxis GyroX { get; set; }
-        public InputChannelTypes.JoyAxis GyroY { get; set; }
-        public InputChannelTypes.JoyAxis GyroZ { get; set; }
+        public ODIF.JoyAxis GyroX { get; set; }
+        public ODIF.JoyAxis GyroY { get; set; }
+        public ODIF.JoyAxis GyroZ { get; set; }
 
-        public InputChannelTypes.JoyAxis AccelX { get; set; }
-        public InputChannelTypes.JoyAxis AccelY { get; set; }
-        public InputChannelTypes.JoyAxis AccelZ { get; set; }
+        public ODIF.JoyAxis AccelX { get; set; }
+        public ODIF.JoyAxis AccelY { get; set; }
+        public ODIF.JoyAxis AccelZ { get; set; }
 
-        public OutputChannelTypes.RumbleMotor BigRumble { get; set; }
-        public OutputChannelTypes.RumbleMotor SmallRumble { get; set; }
-        public OutputChannelTypes.RGBLED LightBar { get; set; }
+        public ODIF.RumbleMotor BigRumble { get; set; }
+        public ODIF.RumbleMotor SmallRumble { get; set; }
+        public ODIF.RGBLED LightBar { get; set; }
 
         public DS4Device()
         {
-            LSx = new InputChannelTypes.JoyAxis("Left Stick X", "", Properties.Resources.LSX.ToImageSource());
-            LSy = new InputChannelTypes.JoyAxis("Left Stick Y", "", Properties.Resources.LSY.ToImageSource());
-            RSx = new InputChannelTypes.JoyAxis("Right Stick X", "",Properties.Resources.RSX.ToImageSource());
-            RSy = new InputChannelTypes.JoyAxis("Right Stick Y", "", Properties.Resources.RSY.ToImageSource());
+            LSx = new ODIF.JoyAxis("Left Stick X", DataFlowDirection.Input, "", Properties.Resources.LSX.ToImageSource());
+            LSy = new ODIF.JoyAxis("Left Stick Y", DataFlowDirection.Input, "", Properties.Resources.LSY.ToImageSource());
+            RSx = new ODIF.JoyAxis("Right Stick X", DataFlowDirection.Input, "",Properties.Resources.RSX.ToImageSource());
+            RSy = new ODIF.JoyAxis("Right Stick Y", DataFlowDirection.Input, "", Properties.Resources.RSY.ToImageSource());
 
-            L3 = new InputChannelTypes.Button("L3", "Left stick", Properties.Resources.L3.ToImageSource());
-            R3 = new InputChannelTypes.Button("R3", "Right Stick", Properties.Resources.R3.ToImageSource());
+            L3 = new ODIF.Button("L3", DataFlowDirection.Input, "Left stick", Properties.Resources.L3.ToImageSource());
+            R3 = new ODIF.Button("R3", DataFlowDirection.Input, "Right Stick", Properties.Resources.R3.ToImageSource());
 
-            L2 = new InputChannelTypes.JoyAxis("L2", "Left Trigger", Properties.Resources.L2.ToImageSource()) { min_Value = 0 };
-            R2 = new InputChannelTypes.JoyAxis("R2", "Right Trigger", Properties.Resources.R2.ToImageSource()) { min_Value = 0 };
-            L1 = new InputChannelTypes.Button("L1", "Left Bumper", Properties.Resources.L1.ToImageSource());
-            R1 = new InputChannelTypes.Button("R1", "Right Bumper", Properties.Resources.R1.ToImageSource());
+            L2 = new ODIF.JoyAxis("L2", DataFlowDirection.Input, "Left Trigger", Properties.Resources.L2.ToImageSource()) { min_Value = 0 };
+            R2 = new ODIF.JoyAxis("R2", DataFlowDirection.Input, "Right Trigger", Properties.Resources.R2.ToImageSource()) { min_Value = 0 };
+            L1 = new ODIF.Button("L1", DataFlowDirection.Input, "Left Bumper", Properties.Resources.L1.ToImageSource());
+            R1 = new ODIF.Button("R1", DataFlowDirection.Input, "Right Bumper", Properties.Resources.R1.ToImageSource());
 
-            DUp = new InputChannelTypes.Button("DPad Up", "", Properties.Resources.DUp.ToImageSource());
-            DDown = new InputChannelTypes.Button("DPad Down", "", Properties.Resources.DDown.ToImageSource());
-            DLeft = new InputChannelTypes.Button("DPad Left", "", Properties.Resources.DLeft.ToImageSource());
-            DRight = new InputChannelTypes.Button("DPad Right", "", Properties.Resources.DRight.ToImageSource());
+            DUp = new ODIF.Button("DPad Up", DataFlowDirection.Input, "", Properties.Resources.DUp.ToImageSource());
+            DDown = new ODIF.Button("DPad Down", DataFlowDirection.Input, "", Properties.Resources.DDown.ToImageSource());
+            DLeft = new ODIF.Button("DPad Left", DataFlowDirection.Input, "", Properties.Resources.DLeft.ToImageSource());
+            DRight = new ODIF.Button("DPad Right", DataFlowDirection.Input, "", Properties.Resources.DRight.ToImageSource());
 
-            Cross = new InputChannelTypes.Button("Cross", "", Properties.Resources.Cross.ToImageSource());
-            Circle = new InputChannelTypes.Button("Circle", "", Properties.Resources.Circle.ToImageSource());
-            Square = new InputChannelTypes.Button("Square", "", Properties.Resources.Square.ToImageSource());
-            Triangle = new InputChannelTypes.Button("Triangle", "", Properties.Resources.Triangle.ToImageSource());
+            Cross = new ODIF.Button("Cross", DataFlowDirection.Input, "", Properties.Resources.Cross.ToImageSource());
+            Circle = new ODIF.Button("Circle", DataFlowDirection.Input, "", Properties.Resources.Circle.ToImageSource());
+            Square = new ODIF.Button("Square", DataFlowDirection.Input, "", Properties.Resources.Square.ToImageSource());
+            Triangle = new ODIF.Button("Triangle", DataFlowDirection.Input, "", Properties.Resources.Triangle.ToImageSource());
 
-            PS = new InputChannelTypes.Button("PS", "");
-            Share = new InputChannelTypes.Button("Share", "", Properties.Resources.Share.ToImageSource());
-            Options = new InputChannelTypes.Button("Options", "", Properties.Resources.Options.ToImageSource());
+            PS = new ODIF.Button("PS", DataFlowDirection.Input, "");
+            Share = new ODIF.Button("Share", DataFlowDirection.Input, "", Properties.Resources.Share.ToImageSource());
+            Options = new ODIF.Button("Options", DataFlowDirection.Input, "", Properties.Resources.Options.ToImageSource());
 
-            Battery = new InputChannelTypes.JoyAxis("Battery Level", "");
-            Charging = new InputChannelTypes.Button("Charging", "");
+            Battery = new ODIF.JoyAxis("Battery Level", DataFlowDirection.Input, "");
+            Charging = new ODIF.Button("Charging", DataFlowDirection.Input, "");
 
-            TouchpadButton = new InputChannelTypes.Button("Touchpad Button","");
-            TouchpadTouchOne = new InputChannelTypes.Button("Touchpad Touch One", "");
-            TouchpadTouchTwo = new InputChannelTypes.Button("Touchpad Touch Two", "");
+            TouchpadButton = new ODIF.Button("Touchpad Button", DataFlowDirection.Input, "");
+            TouchpadTouchOne = new ODIF.Button("Touchpad Touch One", DataFlowDirection.Input, "");
+            TouchpadTouchTwo = new ODIF.Button("Touchpad Touch Two", DataFlowDirection.Input, "");
 
-            TouchpadTouchOneX = new InputChannelTypes.JoyAxis("Touchpad Touch One X", "") { min_Value = 0 };
-            TouchpadTouchOneY = new InputChannelTypes.JoyAxis("Touchpad Touch One Y", "") { min_Value = 0 };
-            TouchpadTouchTwoX = new InputChannelTypes.JoyAxis("Touchpad Touch Two X", "") { min_Value = 0 };
-            TouchpadTouchTwoY = new InputChannelTypes.JoyAxis("Touchpad Touch Two Y", "") { min_Value = 0 };
+            TouchpadTouchOneX = new ODIF.JoyAxis("Touchpad Touch One X", DataFlowDirection.Input, "") { min_Value = 0 };
+            TouchpadTouchOneY = new ODIF.JoyAxis("Touchpad Touch One Y", DataFlowDirection.Input, "") { min_Value = 0 };
+            TouchpadTouchTwoX = new ODIF.JoyAxis("Touchpad Touch Two X", DataFlowDirection.Input, "") { min_Value = 0 };
+            TouchpadTouchTwoY = new ODIF.JoyAxis("Touchpad Touch Two Y", DataFlowDirection.Input, "") { min_Value = 0 };
 
-            GyroX = new InputChannelTypes.JoyAxis("Gyroscope X", "");
-            GyroY = new InputChannelTypes.JoyAxis("Gyroscope Y", "");
-            GyroZ = new InputChannelTypes.JoyAxis("Gyroscope Z", "");
+            GyroX = new ODIF.JoyAxis("Gyroscope X", DataFlowDirection.Input, "");
+            GyroY = new ODIF.JoyAxis("Gyroscope Y", DataFlowDirection.Input, "");
+            GyroZ = new ODIF.JoyAxis("Gyroscope Z", DataFlowDirection.Input, "");
 
-            AccelX = new InputChannelTypes.JoyAxis("Accelerometer X", "");
-            AccelY = new InputChannelTypes.JoyAxis("Accelerometer Y", "");
-            AccelZ = new InputChannelTypes.JoyAxis("Accelerometer Z", "");
+            AccelX = new ODIF.JoyAxis("Accelerometer X", DataFlowDirection.Input, "");
+            AccelY = new ODIF.JoyAxis("Accelerometer Y", DataFlowDirection.Input, "");
+            AccelZ = new ODIF.JoyAxis("Accelerometer Z", DataFlowDirection.Input, "");
 
-            BigRumble = new OutputChannelTypes.RumbleMotor("Big Rumble","");
-            SmallRumble = new OutputChannelTypes.RumbleMotor("Small Rumble", "");
-            LightBar = new OutputChannelTypes.RGBLED("Light Bar", "");
+            BigRumble = new RumbleMotor("Big Rumble", DataFlowDirection.Output, "");
+            SmallRumble = new RumbleMotor("Small Rumble", DataFlowDirection.Output, "");
+            LightBar = new RGBLED("Light Bar", DataFlowDirection.Output, "");
         }
     }
 }

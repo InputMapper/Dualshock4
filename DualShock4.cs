@@ -153,12 +153,6 @@ namespace DualShock4
                         Device.Dispose();
                         Devices.Remove(Device);
                     }
-                    //if (foundDevices.Where(d => d.DevicePath == Device.hDevice.DevicePath).Count() == 0)
-                    //{
-                    //    //Device.Dispose();
-                    //    //Devices.Remove(Device);
-                    //}
-
             }
         }
     }
@@ -210,56 +204,56 @@ namespace DualShock4
             }
 
 
-            InputChannels.Add(deviceClass.Circle);
-            InputChannels.Add(deviceClass.Cross);
-            InputChannels.Add(deviceClass.Square);
-            InputChannels.Add(deviceClass.Triangle);
+            Channels.Add(deviceClass.Circle);
+            Channels.Add(deviceClass.Cross);
+            Channels.Add(deviceClass.Square);
+            Channels.Add(deviceClass.Triangle);
 
-            InputChannels.Add(deviceClass.LSx);
-            InputChannels.Add(deviceClass.LSy);
-            InputChannels.Add(deviceClass.RSx);
-            InputChannels.Add(deviceClass.RSy);
+            Channels.Add(deviceClass.LSx);
+            Channels.Add(deviceClass.LSy);
+            Channels.Add(deviceClass.RSx);
+            Channels.Add(deviceClass.RSy);
 
-            InputChannels.Add(deviceClass.L1);
-            InputChannels.Add(deviceClass.L2);
-            InputChannels.Add(deviceClass.L3);
-            InputChannels.Add(deviceClass.R1);
-            InputChannels.Add(deviceClass.R2);
-            InputChannels.Add(deviceClass.R3);
+            Channels.Add(deviceClass.L1);
+            Channels.Add(deviceClass.L2);
+            Channels.Add(deviceClass.L3);
+            Channels.Add(deviceClass.R1);
+            Channels.Add(deviceClass.R2);
+            Channels.Add(deviceClass.R3);
 
-            InputChannels.Add(deviceClass.PS);
-            InputChannels.Add(deviceClass.Share);
-            InputChannels.Add(deviceClass.Options);
+            Channels.Add(deviceClass.PS);
+            Channels.Add(deviceClass.Share);
+            Channels.Add(deviceClass.Options);
 
-            InputChannels.Add(deviceClass.DUp);
-            InputChannels.Add(deviceClass.DDown);
-            InputChannels.Add(deviceClass.DLeft);
-            InputChannels.Add(deviceClass.DRight);
+            Channels.Add(deviceClass.DUp);
+            Channels.Add(deviceClass.DDown);
+            Channels.Add(deviceClass.DLeft);
+            Channels.Add(deviceClass.DRight);
 
 
-            OutputChannels.Add(deviceClass.BigRumble);
-            OutputChannels.Add(deviceClass.SmallRumble);
-            OutputChannels.Add(deviceClass.LightBar);
+            Channels.Add(deviceClass.BigRumble);
+            Channels.Add(deviceClass.SmallRumble);
+            Channels.Add(deviceClass.LightBar);
 
-            InputChannels.Add(deviceClass.Battery);
-            InputChannels.Add(deviceClass.Charging);
+            Channels.Add(deviceClass.Battery);
+            Channels.Add(deviceClass.Charging);
 
-            InputChannels.Add(deviceClass.GyroX);
-            InputChannels.Add(deviceClass.GyroY);
-            InputChannels.Add(deviceClass.GyroZ);
+            Channels.Add(deviceClass.GyroX);
+            Channels.Add(deviceClass.GyroY);
+            Channels.Add(deviceClass.GyroZ);
 
-            InputChannels.Add(deviceClass.AccelX);
-            InputChannels.Add(deviceClass.AccelY);
-            InputChannels.Add(deviceClass.AccelZ);
+            Channels.Add(deviceClass.AccelX);
+            Channels.Add(deviceClass.AccelY);
+            Channels.Add(deviceClass.AccelZ);
 
-            InputChannels.Add(deviceClass.TouchpadButton);
-            InputChannels.Add(deviceClass.TouchpadTouchOne);
-            InputChannels.Add(deviceClass.TouchpadTouchTwo);
+            Channels.Add(deviceClass.TouchpadButton);
+            Channels.Add(deviceClass.TouchpadTouchOne);
+            Channels.Add(deviceClass.TouchpadTouchTwo);
 
-            InputChannels.Add(deviceClass.TouchpadTouchOneX);
-            InputChannels.Add(deviceClass.TouchpadTouchOneY);
-            InputChannels.Add(deviceClass.TouchpadTouchTwoX);
-            InputChannels.Add(deviceClass.TouchpadTouchTwoY);
+            Channels.Add(deviceClass.TouchpadTouchOneX);
+            Channels.Add(deviceClass.TouchpadTouchOneY);
+            Channels.Add(deviceClass.TouchpadTouchTwoX);
+            Channels.Add(deviceClass.TouchpadTouchTwoY);
 
             deviceClass.BigRumble.PropertyChanged += RumbleChanged;
             deviceClass.SmallRumble.PropertyChanged += RumbleChanged;

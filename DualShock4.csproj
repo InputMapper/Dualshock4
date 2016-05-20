@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\AppData\Roaming\InputMapper2\plugins\Dualshock4\</OutputPath>
+    <OutputPath>..\..\..\..\AppData\Roaming\InputMapper2\plugins\Dualshock4\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -24,12 +24,16 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\..\AppData\Roaming\InputMapper2\plugins\Dualshock4\</OutputPath>
+    <OutputPath>..\..\..\..\AppData\Roaming\InputMapper2\plugins\Dualshock4\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ODIF, Version=1.0.5914.23828, Culture=neutral, PublicKeyToken=19233d9f410e16f7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PluginInterface\bin\Release\ODIF.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -91,13 +95,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\LSY1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\PluginInterface\ODIF.csproj">
-      <Project>{9149de53-b35e-46b1-b509-e8b504c21f75}</Project>
-      <Name>ODIF</Name>
-      <Private>False</Private>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
